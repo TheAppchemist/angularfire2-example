@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>questions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="questions != null; else loading">
+    <ion-item *ngFor="let question of questions">
+      {{question.question}}
+    </ion-item>
+  </ion-list>
+  <ng-template #loading>
+    <div>
+      Loading
+    </div>
+  </ng-template>
+</ion-content>
